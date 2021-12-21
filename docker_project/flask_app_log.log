@@ -1,0 +1,1450 @@
+2021-12-19 19:49:53,814 - Новый запуск приложения
+2021-12-19 19:49:53,840 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 19:50:00,716 - Новый запуск приложения
+2021-12-19 19:50:00,740 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 19:50:16,966 - 127.0.0.1 - - [19/Dec/2021 19:50:16] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 19:50:43,144 - Стадия обучения
+2021-12-19 19:50:43,171 - Успешно получили данные для обучения и теста
+2021-12-19 19:50:43,172 - Выбираем тип модели
+2021-12-19 19:50:43,172 - Выбиранный тип модели - DecisionTreeRegressor
+2021-12-19 19:50:43,172 - Имя модели - 1_model_dtr
+2021-12-19 19:50:43,172 - Получение данных и препроцессинг
+2021-12-19 19:50:43,175 - Успешно удалили null значения
+2021-12-19 19:50:43,176 - категориальные значения []
+2021-12-19 19:50:43,177 - Done!
+2021-12-19 19:50:43,180 - Обучаем модель 1_model_dtr
+2021-12-19 19:50:43,188 - Качество модели на отложенной выборки - 25.993190895971196
+2021-12-19 19:50:43,192 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-19 19:50:43,232 - Информания о модели success!
+2021-12-19 19:50:43,232 - Done!
+2021-12-19 19:50:43,234 - 127.0.0.1 - - [19/Dec/2021 19:50:43] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-19 19:50:43,271 - 127.0.0.1 - - [19/Dec/2021 19:50:43] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-19 19:59:44,015 - Новый запуск приложения
+2021-12-19 19:59:44,046 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 19:59:54,263 - 127.0.0.1 - - [19/Dec/2021 19:59:54] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 20:00:14,381 - Стадия обучения
+2021-12-19 20:00:14,403 - Успешно получили данные для обучения и теста
+2021-12-19 20:00:14,403 - Выбираем тип модели
+2021-12-19 20:00:14,403 - Выбиранный тип модели - RandomForestClassifier
+2021-12-19 20:00:14,403 - Имя модели - 2_model_rfc
+2021-12-19 20:00:14,403 - Получение данных и препроцессинг
+2021-12-19 20:00:14,407 - Успешно удалили null значения
+2021-12-19 20:00:14,409 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-19 20:00:14,415 - Done!
+2021-12-19 20:00:14,419 - Обучаем модель 2_model_rfc
+2021-12-19 20:00:14,633 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-19 20:00:14,702 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-19 20:00:14,750 - Информания о модели {'name': '2_model_rfc.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-19 20:00:14,750 - Done!
+2021-12-19 20:00:14,752 - 127.0.0.1 - - [19/Dec/2021 20:00:14] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-19 20:00:14,766 - 127.0.0.1 - - [19/Dec/2021 20:00:14] "GET /api/ml_models/model_info/2_model_rfc HTTP/1.1" 200 -
+2021-12-19 20:19:46,341 - Новый запуск приложения
+2021-12-19 20:19:46,388 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 20:19:56,274 - Получаем информацию о доступных классах моделей
+2021-12-19 20:19:56,274 - 127.0.0.1 - - [19/Dec/2021 20:19:56] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 20:20:08,962 - Получаем информацию обо всех обученных моделях
+2021-12-19 20:20:08,962 - 127.0.0.1 - - [19/Dec/2021 20:20:08] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-19 20:21:04,176 - Стадия предсказания
+2021-12-19 20:21:04,176 - Имя модели с помощью которой хотим получить предсказание
+2021-12-19 20:21:04,176 - Считываем данные для предсказания
+2021-12-19 20:21:04,192 - Делаем предобработку
+2021-12-19 20:21:04,192 - Получение данных и препроцессинг
+2021-12-19 20:21:04,207 - Успешно удалили null значения
+2021-12-19 20:21:04,207 - категориальные значения ['Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-19 20:21:04,207 - Done!
+2021-12-19 20:21:04,207 - Импортируем модель model/1_model_lgb.pkl
+2021-12-19 20:21:04,207 - Делаем предобработку
+2021-12-19 20:21:04,223 - Exception on /api/ml_models/predict/1_model_lgb [PUT]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 407, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 430, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\representations.py", line 25, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+2021-12-19 20:21:04,260 - 127.0.0.1 - - [19/Dec/2021 20:21:04] "[35m[1mPUT /api/ml_models/predict/1_model_lgb HTTP/1.1[0m" 500 -
+2021-12-19 20:21:04,275 - 127.0.0.1 - - [19/Dec/2021 20:21:04] "GET /api/ml_models/predict/1_model_lgb HTTP/1.1" 200 -
+2021-12-19 20:33:04,356 - Новый запуск приложения
+2021-12-19 20:33:04,370 - Новый запуск приложения
+2021-12-19 20:33:04,396 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 20:33:48,475 - Получаем доступные классы моделей
+2021-12-19 20:33:48,475 - Получаем информацию о доступных классах моделей
+2021-12-19 20:33:48,476 - 127.0.0.1 - - [19/Dec/2021 20:33:48] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 20:34:34,897 - Предаем данные в модель
+2021-12-19 20:34:34,903 - Стадия обучения
+2021-12-19 20:34:34,944 - Успешно получили данные для обучения и теста
+2021-12-19 20:34:34,944 - Выбираем тип модели
+2021-12-19 20:34:34,944 - Выбиранный тип модели - DecisionTreeRegressor
+2021-12-19 20:34:34,945 - Имя модели - 2_model_dtr
+2021-12-19 20:34:34,945 - Получение данных и препроцессинг
+2021-12-19 20:34:34,949 - Успешно удалили null значения
+2021-12-19 20:34:34,951 - категориальные значения []
+2021-12-19 20:34:34,952 - Done!
+2021-12-19 20:34:34,956 - Обучаем модель 2_model_dtr
+2021-12-19 20:34:34,964 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 110, in model_train
+    logging.info(f'Качество модели на отложенной выборки - {metric_name} = {_metric}')
+UnboundLocalError: local variable 'metric_name' referenced before assignment
+2021-12-19 20:34:35,010 - 127.0.0.1 - - [19/Dec/2021 20:34:35] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-19 20:34:35,021 - Предаем данные в модель
+2021-12-19 20:34:35,021 - Получаем информацию о моделе 2_model_dtr
+2021-12-19 20:34:35,023 - Exception on /api/ml_models/model_info/2_model_dtr [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 167, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-19 20:34:35,026 - 127.0.0.1 - - [19/Dec/2021 20:34:35] "[35m[1mGET /api/ml_models/model_info/2_model_dtr HTTP/1.1[0m" 500 -
+2021-12-19 20:35:24,817 - Новый запуск приложения
+2021-12-19 20:35:24,825 - Новый запуск приложения
+2021-12-19 20:35:24,843 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 20:35:33,437 - Получаем доступные классы моделей
+2021-12-19 20:35:33,437 - Получаем информацию о доступных классах моделей
+2021-12-19 20:35:33,438 - 127.0.0.1 - - [19/Dec/2021 20:35:33] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 20:36:00,961 - Предаем данные в модель
+2021-12-19 20:36:00,969 - Стадия обучения
+2021-12-19 20:36:01,004 - Успешно получили данные для обучения и теста
+2021-12-19 20:36:01,004 - Выбираем тип модели
+2021-12-19 20:36:01,004 - Выбиранный тип модели - RandomForestClassifier
+2021-12-19 20:36:01,004 - Имя модели - 3_model_rfc
+2021-12-19 20:36:01,005 - Получение данных и препроцессинг
+2021-12-19 20:36:01,012 - Успешно удалили null значения
+2021-12-19 20:36:01,017 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-19 20:36:01,030 - Done!
+2021-12-19 20:36:01,036 - Обучаем модель 3_model_rfc
+2021-12-19 20:36:01,274 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-19 20:36:01,274 - Сохраняем модель как model/3_model_rfc.pkl
+2021-12-19 20:36:01,354 - Записываем результаты в БД
+2021-12-19 20:36:01,356 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-19 20:36:01,413 - Информания о модели {'name': '3_model_rfc.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-19 20:36:01,413 - Done!
+2021-12-19 20:36:01,414 - 127.0.0.1 - - [19/Dec/2021 20:36:01] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-19 20:36:01,425 - Предаем данные в модель
+2021-12-19 20:36:01,425 - Получаем информацию о моделе 3_model_rfc
+2021-12-19 20:36:01,440 - Done
+2021-12-19 20:36:01,441 - 127.0.0.1 - - [19/Dec/2021 20:36:01] "GET /api/ml_models/model_info/3_model_rfc HTTP/1.1" 200 -
+2021-12-19 20:38:09,601 - Новый запуск приложения
+2021-12-19 20:38:09,615 - Новый запуск приложения(app.py)
+2021-12-19 20:38:09,636 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 20:38:17,932 - Получаем доступные классы моделей(app.py)
+2021-12-19 20:38:17,932 - Получаем информацию о доступных классах моделей
+2021-12-19 20:38:17,933 - 127.0.0.1 - - [19/Dec/2021 20:38:17] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 20:38:41,329 - Предаем данные в модель(app.py)
+2021-12-19 20:38:41,335 - Стадия обучения
+2021-12-19 20:38:41,368 - Успешно получили данные для обучения и теста
+2021-12-19 20:38:41,369 - Выбираем тип модели
+2021-12-19 20:38:41,369 - Выбиранный тип модели - DecisionTreeRegressor
+2021-12-19 20:38:41,369 - Имя модели - 3_model_dtr
+2021-12-19 20:38:41,369 - Получение данных и препроцессинг
+2021-12-19 20:38:41,373 - Успешно удалили null значения
+2021-12-19 20:38:41,375 - категориальные значения []
+2021-12-19 20:38:41,375 - Done!
+2021-12-19 20:38:41,379 - Обучаем модель 3_model_dtr
+2021-12-19 20:38:41,388 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 110, in model_train
+    logging.info(f'Качество модели на отложенной выборки - {metric_name} = {_metric}')
+UnboundLocalError: local variable 'metric_name' referenced before assignment
+2021-12-19 20:38:41,396 - 127.0.0.1 - - [19/Dec/2021 20:38:41] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-19 20:38:41,406 - Предаем данные в модель(app.py)
+2021-12-19 20:38:41,407 - Получаем информацию о моделе 3_model_dtr
+2021-12-19 20:38:41,409 - Exception on /api/ml_models/model_info/3_model_dtr [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 167, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-19 20:38:41,411 - 127.0.0.1 - - [19/Dec/2021 20:38:41] "[35m[1mGET /api/ml_models/model_info/3_model_dtr HTTP/1.1[0m" 500 -
+2021-12-19 21:23:49,030 - Новый запуск приложения
+2021-12-19 21:23:49,030 - Новый запуск приложения(app.py)
+2021-12-19 21:23:49,061 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-19 21:24:02,506 - Получаем доступные классы моделей(app.py)
+2021-12-19 21:24:02,506 - Получаем информацию о доступных классах моделей
+2021-12-19 21:24:02,506 - 127.0.0.1 - - [19/Dec/2021 21:24:02] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-19 21:24:37,989 - Предаем данные в модель(app.py)
+2021-12-19 21:24:37,989 - Стадия обучения
+2021-12-19 21:24:38,020 - Успешно получили данные для обучения и теста
+2021-12-19 21:24:38,036 - Выбираем тип модели
+2021-12-19 21:24:38,036 - Выбиранный тип модели - RandomForestClassifier
+2021-12-19 21:24:38,036 - Имя модели - 5_model_rfc
+2021-12-19 21:24:38,036 - Получение данных и препроцессинг
+2021-12-19 21:24:38,036 - Успешно удалили null значения
+2021-12-19 21:24:38,036 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-19 21:24:38,051 - Done!
+2021-12-19 21:24:38,051 - Обучаем модель 5_model_rfc
+2021-12-19 21:24:38,301 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-19 21:24:38,301 - Сохраняем модель как model/5_model_rfc.pkl
+2021-12-19 21:24:38,395 - Записываем результаты в БД
+2021-12-19 21:24:38,395 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-19 21:24:38,414 - Информания о модели {'name': '5_model_rfc.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-19 21:24:38,414 - Done!
+2021-12-19 21:24:38,414 - 127.0.0.1 - - [19/Dec/2021 21:24:38] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-19 21:24:38,414 - Предаем данные в модель(app.py)
+2021-12-19 21:24:38,414 - Получаем информацию о моделе 5_model_rfc
+2021-12-19 21:24:38,429 - Done
+2021-12-19 21:24:38,429 - 127.0.0.1 - - [19/Dec/2021 21:24:38] "GET /api/ml_models/model_info/5_model_rfc HTTP/1.1" 200 -
+2021-12-20 11:16:47,157 - Новый запуск приложения
+2021-12-20 11:16:49,342 - Новый запуск приложения(app.py)
+2021-12-20 11:16:49,384 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:17:07,006 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:17:07,006 - Получаем информацию о доступных классах моделей
+2021-12-20 11:17:07,007 - 127.0.0.1 - - [20/Dec/2021 11:17:07] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:17:27,574 - Предаем данные в модель(app.py)
+2021-12-20 11:17:27,579 - Стадия обучения
+2021-12-20 11:17:27,606 - Успешно получили данные для обучения и теста
+2021-12-20 11:17:27,606 - Выбираем тип модели
+2021-12-20 11:17:27,606 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:17:27,606 - Имя модели - 5_model_rfc
+2021-12-20 11:17:30,107 - 127.0.0.1 - - [20/Dec/2021 11:17:30] "[33mPOST /api/2.0/mlflow/runs/create HTTP/1.1[0m" 404 -
+2021-12-20 11:17:30,109 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 108, in model_train
+    with mlflow.start_run(run_name=f'{model_name}'):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\fluent.py", line 289, in start_run
+    active_run_obj = client.create_run(experiment_id=exp_id_for_run, tags=tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 265, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 108, in create_run
+    tags=[RunTag(key, value) for (key, value) in tags.items()],
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 170, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+2021-12-20 11:17:30,164 - 127.0.0.1 - - [20/Dec/2021 11:17:30] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 11:17:30,175 - Предаем данные в модель(app.py)
+2021-12-20 11:17:30,175 - Получаем информацию о моделе 5_model_rfc
+2021-12-20 11:17:30,189 - Done
+2021-12-20 11:17:30,190 - 127.0.0.1 - - [20/Dec/2021 11:17:30] "GET /api/ml_models/model_info/5_model_rfc HTTP/1.1" 200 -
+2021-12-20 11:17:38,639 - 127.0.0.1 - - [20/Dec/2021 11:17:38] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:17:42,068 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET / HTTP/1.1" 200 -
+2021-12-20 11:17:42,108 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2021-12-20 11:17:42,109 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2021-12-20 11:17:42,115 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+2021-12-20 11:17:42,119 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2021-12-20 11:17:42,364 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET /swagger.json HTTP/1.1" 200 -
+2021-12-20 11:17:42,412 - 127.0.0.1 - - [20/Dec/2021 11:17:42] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-12-20 11:17:53,250 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "GET / HTTP/1.1" 200 -
+2021-12-20 11:17:53,288 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+2021-12-20 11:17:53,292 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+2021-12-20 11:17:53,294 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2021-12-20 11:17:53,297 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2021-12-20 11:17:53,659 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "GET /swagger.json HTTP/1.1" 200 -
+2021-12-20 11:17:53,668 - 127.0.0.1 - - [20/Dec/2021 11:17:53] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+2021-12-20 11:17:56,985 - 127.0.0.1 - - [20/Dec/2021 11:17:56] "GET / HTTP/1.1" 200 -
+2021-12-20 11:17:57,018 - 127.0.0.1 - - [20/Dec/2021 11:17:57] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+2021-12-20 11:17:57,023 - 127.0.0.1 - - [20/Dec/2021 11:17:57] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+2021-12-20 11:17:57,027 - 127.0.0.1 - - [20/Dec/2021 11:17:57] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2021-12-20 11:17:57,029 - 127.0.0.1 - - [20/Dec/2021 11:17:57] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2021-12-20 11:17:57,104 - 127.0.0.1 - - [20/Dec/2021 11:17:57] "GET /swagger.json HTTP/1.1" 200 -
+2021-12-20 11:17:57,109 - 127.0.0.1 - - [20/Dec/2021 11:17:57] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+2021-12-20 11:21:44,186 - Новый запуск приложения
+2021-12-20 11:21:44,204 - Новый запуск приложения(app.py)
+2021-12-20 11:21:44,230 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:22:00,739 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:22:00,739 - Получаем информацию о доступных классах моделей
+2021-12-20 11:22:00,740 - 127.0.0.1 - - [20/Dec/2021 11:22:00] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:22:35,177 - Предаем данные в модель(app.py)
+2021-12-20 11:22:35,183 - Стадия обучения
+2021-12-20 11:22:35,211 - Успешно получили данные для обучения и теста
+2021-12-20 11:22:35,212 - Выбираем тип модели
+2021-12-20 11:22:35,212 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:22:35,212 - Имя модели - 6_model_rfc
+2021-12-20 11:22:37,302 - 127.0.0.1 - - [20/Dec/2021 11:22:37] "[33mGET /api/2.0/mlflow/experiments/get-by-name?experiment_name=flask_app_mlflow HTTP/1.1[0m" 404 -
+2021-12-20 11:22:39,349 - 127.0.0.1 - - [20/Dec/2021 11:22:39] "[33mGET /api/2.0/mlflow/experiments/list?view_type=ALL HTTP/1.1[0m" 404 -
+2021-12-20 11:22:39,351 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 285, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/experiments/get-by-name failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 108, in model_train
+    mlflow.set_experiment('flask_app_mlflow')
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\fluent.py", line 104, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 462, in get_experiment_by_name
+    return self._tracking_client.get_experiment_by_name(name)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 167, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 297, in get_experiment_by_name
+    for experiment in self.list_experiments(ViewType.ALL):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 77, in list_experiments
+    response_proto = self._call_endpoint(ListExperiments, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/experiments/list failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+2021-12-20 11:22:39,365 - 127.0.0.1 - - [20/Dec/2021 11:22:39] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 11:22:39,375 - Предаем данные в модель(app.py)
+2021-12-20 11:22:39,375 - Получаем информацию о моделе 6_model_rfc
+2021-12-20 11:22:39,378 - Exception on /api/ml_models/model_info/6_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 180, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 11:22:39,380 - 127.0.0.1 - - [20/Dec/2021 11:22:39] "[35m[1mGET /api/ml_models/model_info/6_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 11:25:40,084 - Новый запуск приложения
+2021-12-20 11:25:42,254 - Новый запуск приложения(app.py)
+2021-12-20 11:25:42,276 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:25:52,352 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:25:52,353 - Получаем информацию о доступных классах моделей
+2021-12-20 11:25:52,354 - 127.0.0.1 - - [20/Dec/2021 11:25:52] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:26:14,130 - Предаем данные в модель(app.py)
+2021-12-20 11:26:14,135 - Стадия обучения
+2021-12-20 11:26:14,160 - Успешно получили данные для обучения и теста
+2021-12-20 11:26:14,161 - Выбираем тип модели
+2021-12-20 11:26:14,161 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:26:14,161 - Имя модели - 7_model_rfc
+2021-12-20 11:26:16,483 - 127.0.0.1 - - [20/Dec/2021 11:26:16] "[33mPOST /api/2.0/mlflow/runs/create HTTP/1.1[0m" 404 -
+2021-12-20 11:26:16,486 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 107, in model_train
+    with mlflow.start_run(run_name='RandomForestClassifier3'):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\fluent.py", line 289, in start_run
+    active_run_obj = client.create_run(experiment_id=exp_id_for_run, tags=tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 265, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 108, in create_run
+    tags=[RunTag(key, value) for (key, value) in tags.items()],
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 170, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+2021-12-20 11:26:16,500 - 127.0.0.1 - - [20/Dec/2021 11:26:16] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 11:26:16,509 - Предаем данные в модель(app.py)
+2021-12-20 11:26:16,510 - Получаем информацию о моделе 7_model_rfc
+2021-12-20 11:26:16,513 - Exception on /api/ml_models/model_info/7_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 178, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 11:26:16,515 - 127.0.0.1 - - [20/Dec/2021 11:26:16] "[35m[1mGET /api/ml_models/model_info/7_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 11:28:44,053 - Новый запуск приложения
+2021-12-20 11:28:46,196 - Новый запуск приложения(app.py)
+2021-12-20 11:28:46,218 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:28:50,357 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:28:50,357 - Получаем информацию о доступных классах моделей
+2021-12-20 11:28:50,358 - 127.0.0.1 - - [20/Dec/2021 11:28:50] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:29:07,659 - Предаем данные в модель(app.py)
+2021-12-20 11:29:07,665 - Стадия обучения
+2021-12-20 11:29:07,687 - Успешно получили данные для обучения и теста
+2021-12-20 11:29:07,687 - Выбираем тип модели
+2021-12-20 11:29:07,687 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:29:07,687 - Имя модели - 67fjf
+2021-12-20 11:29:10,014 - 127.0.0.1 - - [20/Dec/2021 11:29:10] "[33mPOST /api/2.0/mlflow/runs/create HTTP/1.1[0m" 404 -
+2021-12-20 11:29:10,016 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 107, in model_train
+    with mlflow.start_run(run_name='RandomForestClassifier3'):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\fluent.py", line 289, in start_run
+    active_run_obj = client.create_run(experiment_id=exp_id_for_run, tags=tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 265, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 108, in create_run
+    tags=[RunTag(key, value) for (key, value) in tags.items()],
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 170, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+2021-12-20 11:29:10,030 - 127.0.0.1 - - [20/Dec/2021 11:29:10] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 11:29:10,039 - Предаем данные в модель(app.py)
+2021-12-20 11:29:10,040 - Получаем информацию о моделе 67fjf
+2021-12-20 11:29:10,042 - Exception on /api/ml_models/model_info/67fjf [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 178, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 11:29:10,044 - 127.0.0.1 - - [20/Dec/2021 11:29:10] "[35m[1mGET /api/ml_models/model_info/67fjf HTTP/1.1[0m" 500 -
+2021-12-20 11:30:34,408 - Новый запуск приложения
+2021-12-20 11:30:36,554 - Новый запуск приложения(app.py)
+2021-12-20 11:30:36,575 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:30:46,045 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:30:46,046 - Получаем информацию о доступных классах моделей
+2021-12-20 11:30:46,047 - 127.0.0.1 - - [20/Dec/2021 11:30:46] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:31:06,842 - Предаем данные в модель(app.py)
+2021-12-20 11:31:06,849 - Стадия обучения
+2021-12-20 11:31:06,871 - Успешно получили данные для обучения и теста
+2021-12-20 11:31:06,871 - Выбираем тип модели
+2021-12-20 11:31:06,872 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:31:06,872 - Имя модели - sklkls
+2021-12-20 11:31:06,872 - Получение данных и препроцессинг
+2021-12-20 11:31:06,875 - Успешно удалили null значения
+2021-12-20 11:31:06,877 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 11:31:06,885 - Done!
+2021-12-20 11:31:07,119 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 11:31:07,119 - Сохраняем модель как model/sklkls.pkl
+2021-12-20 11:31:07,197 - Записываем результаты в БД
+2021-12-20 11:31:07,198 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 11:31:07,203 - Информания о модели {'name': 'sklkls.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 11:31:07,203 - Done!
+2021-12-20 11:31:07,204 - 127.0.0.1 - - [20/Dec/2021 11:31:07] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 11:31:07,216 - Предаем данные в модель(app.py)
+2021-12-20 11:31:07,216 - Получаем информацию о моделе sklkls
+2021-12-20 11:31:07,231 - Done
+2021-12-20 11:31:07,232 - 127.0.0.1 - - [20/Dec/2021 11:31:07] "GET /api/ml_models/model_info/sklkls HTTP/1.1" 200 -
+2021-12-20 11:31:51,414 - 127.0.0.1 - - [20/Dec/2021 11:31:51] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:32:00,837 - 127.0.0.1 - - [20/Dec/2021 11:32:00] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:32:15,830 - 127.0.0.1 - - [20/Dec/2021 11:32:15] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:32:30,839 - 127.0.0.1 - - [20/Dec/2021 11:32:30] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:32:45,841 - 127.0.0.1 - - [20/Dec/2021 11:32:45] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:33:00,835 - 127.0.0.1 - - [20/Dec/2021 11:33:00] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:33:15,829 - 127.0.0.1 - - [20/Dec/2021 11:33:15] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:33:30,840 - 127.0.0.1 - - [20/Dec/2021 11:33:30] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:33:45,833 - 127.0.0.1 - - [20/Dec/2021 11:33:45] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:34:00,842 - 127.0.0.1 - - [20/Dec/2021 11:34:00] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:34:15,839 - 127.0.0.1 - - [20/Dec/2021 11:34:15] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:34:30,836 - 127.0.0.1 - - [20/Dec/2021 11:34:30] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:34:45,833 - 127.0.0.1 - - [20/Dec/2021 11:34:45] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:35:00,835 - 127.0.0.1 - - [20/Dec/2021 11:35:00] "[33mPOST /ajax-api/2.0/preview/mlflow/runs/search HTTP/1.1[0m" 404 -
+2021-12-20 11:38:13,651 - Новый запуск приложения
+2021-12-20 11:38:15,773 - Новый запуск приложения(app.py)
+2021-12-20 11:38:15,790 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:38:22,045 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:38:22,045 - Получаем информацию о доступных классах моделей
+2021-12-20 11:38:22,046 - 127.0.0.1 - - [20/Dec/2021 11:38:22] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:38:37,160 - Предаем данные в модель(app.py)
+2021-12-20 11:38:37,165 - Стадия обучения
+2021-12-20 11:38:37,190 - Успешно получили данные для обучения и теста
+2021-12-20 11:38:37,190 - Выбираем тип модели
+2021-12-20 11:38:37,191 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:38:37,191 - Имя модели - ijgrj
+2021-12-20 11:38:39,537 - 127.0.0.1 - - [20/Dec/2021 11:38:39] "[33mPOST /api/2.0/mlflow/runs/create HTTP/1.1[0m" 404 -
+2021-12-20 11:38:39,539 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 107, in model_train
+    with mlflow.start_run(run_name='RandomForestClassifier3'):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\fluent.py", line 289, in start_run
+    active_run_obj = client.create_run(experiment_id=exp_id_for_run, tags=tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 265, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 108, in create_run
+    tags=[RunTag(key, value) for (key, value) in tags.items()],
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 170, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+2021-12-20 11:38:39,553 - 127.0.0.1 - - [20/Dec/2021 11:38:39] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 11:38:39,566 - Предаем данные в модель(app.py)
+2021-12-20 11:38:39,566 - Получаем информацию о моделе ijgrj
+2021-12-20 11:38:39,570 - Exception on /api/ml_models/model_info/ijgrj [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 178, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 11:38:39,573 - 127.0.0.1 - - [20/Dec/2021 11:38:39] "[35m[1mGET /api/ml_models/model_info/ijgrj HTTP/1.1[0m" 500 -
+2021-12-20 11:40:52,353 - Новый запуск приложения
+2021-12-20 11:40:54,461 - Новый запуск приложения(app.py)
+2021-12-20 11:40:54,476 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:41:00,363 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:41:00,364 - Получаем информацию о доступных классах моделей
+2021-12-20 11:41:00,365 - 127.0.0.1 - - [20/Dec/2021 11:41:00] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:41:14,127 - Предаем данные в модель(app.py)
+2021-12-20 11:41:14,133 - Стадия обучения
+2021-12-20 11:41:14,159 - Успешно получили данные для обучения и теста
+2021-12-20 11:41:14,159 - Выбираем тип модели
+2021-12-20 11:41:14,159 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:41:14,159 - Имя модели - jjdkfjdkl
+2021-12-20 11:41:16,483 - 127.0.0.1 - - [20/Dec/2021 11:41:16] "[33mPOST /api/2.0/mlflow/runs/create HTTP/1.1[0m" 404 -
+2021-12-20 11:41:16,487 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 107, in model_train
+    with mlflow.start_run(run_name='RandomForestClassifier3'):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\fluent.py", line 289, in start_run
+    active_run_obj = client.create_run(experiment_id=exp_id_for_run, tags=tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 265, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 108, in create_run
+    tags=[RunTag(key, value) for (key, value) in tags.items()],
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 170, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 229, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\utils\rest_utils.py", line 175, in verify_rest_response
+    raise MlflowException("%s. Response body: '%s'" % (base_msg, response.text))
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+'
+2021-12-20 11:41:16,500 - 127.0.0.1 - - [20/Dec/2021 11:41:16] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 11:41:16,510 - Предаем данные в модель(app.py)
+2021-12-20 11:41:16,511 - Получаем информацию о моделе jjdkfjdkl
+2021-12-20 11:41:16,513 - Exception on /api/ml_models/model_info/jjdkfjdkl [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 403, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\views.py", line 84, in view
+    return current_app.ensure_sync(self.dispatch_request)(*args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\resource.py", line 49, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 71, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 190, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 11:41:16,515 - 127.0.0.1 - - [20/Dec/2021 11:41:16] "[35m[1mGET /api/ml_models/model_info/jjdkfjdkl HTTP/1.1[0m" 500 -
+2021-12-20 11:43:00,671 - Новый запуск приложения
+2021-12-20 11:43:02,823 - Новый запуск приложения(app.py)
+2021-12-20 11:43:02,845 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 11:43:09,169 - Получаем доступные классы моделей(app.py)
+2021-12-20 11:43:09,170 - Получаем информацию о доступных классах моделей
+2021-12-20 11:43:09,171 - 127.0.0.1 - - [20/Dec/2021 11:43:09] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 11:43:20,206 - Предаем данные в модель(app.py)
+2021-12-20 11:43:20,210 - Стадия обучения
+2021-12-20 11:43:20,235 - Успешно получили данные для обучения и теста
+2021-12-20 11:43:20,236 - Выбираем тип модели
+2021-12-20 11:43:20,236 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 11:43:20,236 - Имя модели - dkfjdl
+2021-12-20 11:43:20,237 - Получение данных и препроцессинг
+2021-12-20 11:43:20,241 - Успешно удалили null значения
+2021-12-20 11:43:20,243 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 11:43:20,250 - Done!
+2021-12-20 11:43:20,484 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 11:43:20,484 - Сохраняем модель как model/dkfjdl.pkl
+2021-12-20 11:43:20,575 - Записываем результаты в БД
+2021-12-20 11:43:20,577 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 11:43:20,610 - Информания о модели {'name': 'dkfjdl.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 11:43:20,611 - Done!
+2021-12-20 11:43:20,612 - 127.0.0.1 - - [20/Dec/2021 11:43:20] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 11:43:20,620 - Предаем данные в модель(app.py)
+2021-12-20 11:43:20,620 - Получаем информацию о моделе dkfjdl
+2021-12-20 11:43:20,628 - Done
+2021-12-20 11:43:20,629 - 127.0.0.1 - - [20/Dec/2021 11:43:20] "GET /api/ml_models/model_info/dkfjdl HTTP/1.1" 200 -
+2021-12-20 12:52:08,406 - Новый запуск приложения
+2021-12-20 12:52:08,413 - Новый запуск приложения(app.py)
+2021-12-20 12:52:08,423 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 12:52:18,799 - Получаем доступные классы моделей(app.py)
+2021-12-20 12:52:18,799 - Получаем информацию о доступных классах моделей
+2021-12-20 12:52:18,800 - 127.0.0.1 - - [20/Dec/2021 12:52:18] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 12:52:32,160 - Предаем данные в модель(app.py)
+2021-12-20 12:52:32,169 - Стадия обучения
+2021-12-20 12:52:32,204 - Успешно получили данные для обучения и теста
+2021-12-20 12:52:32,204 - Выбираем тип модели
+2021-12-20 12:52:32,204 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 12:52:32,204 - Имя модели - jkjk
+2021-12-20 12:52:41,028 - Получение данных и препроцессинг
+2021-12-20 12:52:41,034 - Успешно удалили null значения
+2021-12-20 12:52:41,037 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 12:52:41,053 - Done!
+2021-12-20 12:52:47,813 - Получение данных и препроцессинг
+2021-12-20 12:52:47,817 - Успешно удалили null значения
+2021-12-20 12:52:47,820 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 12:52:47,827 - Done!
+2021-12-20 12:52:48,166 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 12:52:48,166 - Сохраняем модель как model/jkjk.pkl
+2021-12-20 12:52:48,237 - Записываем результаты в БД
+2021-12-20 12:52:48,239 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 12:52:48,278 - Информания о модели {'name': 'jkjk.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 12:52:48,278 - Done!
+2021-12-20 12:52:48,280 - 127.0.0.1 - - [20/Dec/2021 12:52:48] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 12:52:48,292 - Предаем данные в модель(app.py)
+2021-12-20 12:52:48,293 - Получаем информацию о моделе jkjk
+2021-12-20 12:52:48,305 - Done
+2021-12-20 12:52:48,306 - 127.0.0.1 - - [20/Dec/2021 12:52:48] "GET /api/ml_models/model_info/jkjk HTTP/1.1" 200 -
+2021-12-20 14:50:42,440 - Новый запуск приложения
+2021-12-20 14:50:42,530 - Новый запуск приложения(app.py)
+2021-12-20 14:50:42,553 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 14:50:52,479 - Получаем доступные классы моделей(app.py)
+2021-12-20 14:50:52,479 - Получаем информацию о доступных классах моделей
+2021-12-20 14:50:52,481 - 127.0.0.1 - - [20/Dec/2021 14:50:52] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 14:51:31,544 - Предаем данные в модель(app.py)
+2021-12-20 14:51:31,552 - Стадия обучения
+2021-12-20 14:51:31,590 - Успешно получили данные для обучения и теста
+2021-12-20 14:51:31,590 - Выбираем тип модели
+2021-12-20 14:51:31,591 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 14:51:31,591 - Имя модели - 1_rfc_model
+2021-12-20 14:51:36,202 - Получение данных и препроцессинг
+2021-12-20 14:51:36,209 - Успешно удалили null значения
+2021-12-20 14:51:36,212 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 14:51:36,223 - Done!
+2021-12-20 14:51:42,908 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 14:51:42,908 - Сохраняем модель как model/1_rfc_model.pkl
+2021-12-20 14:51:43,027 - Записываем результаты в БД
+2021-12-20 14:51:43,030 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 14:51:43,070 - Информания о модели {'name': '1_rfc_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 14:51:43,070 - Done!
+2021-12-20 14:51:43,072 - 127.0.0.1 - - [20/Dec/2021 14:51:43] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 14:51:43,085 - Предаем данные в модель(app.py)
+2021-12-20 14:51:43,085 - Получаем информацию о моделе 1_rfc_model
+2021-12-20 14:51:43,098 - Done
+2021-12-20 14:51:43,100 - 127.0.0.1 - - [20/Dec/2021 14:51:43] "GET /api/ml_models/model_info/1_rfc_model HTTP/1.1" 200 -
+2021-12-20 14:54:18,068 - Новый запуск приложения
+2021-12-20 14:54:18,107 - Новый запуск приложения(app.py)
+2021-12-20 14:54:18,121 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 14:54:46,096 - Получаем доступные классы моделей(app.py)
+2021-12-20 14:54:46,096 - Получаем информацию о доступных классах моделей
+2021-12-20 14:54:46,098 - 127.0.0.1 - - [20/Dec/2021 14:54:46] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 14:55:10,768 - Предаем данные в модель(app.py)
+2021-12-20 14:55:10,776 - Стадия обучения
+2021-12-20 14:55:10,817 - Успешно получили данные для обучения и теста
+2021-12-20 14:55:10,817 - Выбираем тип модели
+2021-12-20 14:55:10,818 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 14:55:10,818 - Имя модели - 2_rfc_model
+2021-12-20 14:55:15,377 - Получение данных и препроцессинг
+2021-12-20 14:55:15,382 - Успешно удалили null значения
+2021-12-20 14:55:15,385 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 14:55:15,396 - Done!
+2021-12-20 14:55:22,174 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 14:55:22,174 - Сохраняем модель как model/2_rfc_model.pkl
+2021-12-20 14:55:22,294 - Записываем результаты в БД
+2021-12-20 14:55:22,296 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 14:55:22,336 - Информания о модели {'name': '2_rfc_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 14:55:22,337 - Done!
+2021-12-20 14:55:22,338 - 127.0.0.1 - - [20/Dec/2021 14:55:22] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 14:55:22,351 - Предаем данные в модель(app.py)
+2021-12-20 14:55:22,352 - Получаем информацию о моделе 2_rfc_model
+2021-12-20 14:55:22,363 - Done
+2021-12-20 14:55:22,365 - 127.0.0.1 - - [20/Dec/2021 14:55:22] "GET /api/ml_models/model_info/2_rfc_model HTTP/1.1" 200 -
+2021-12-20 14:58:34,283 - 127.0.0.1 - - [20/Dec/2021 14:58:34] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 14:58:34,413 - 127.0.0.1 - - [20/Dec/2021 14:58:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-12-20 15:25:44,698 - Новый запуск приложения
+2021-12-20 15:25:44,785 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 15:25:55,554 - Получаем информацию о доступных классах моделей
+2021-12-20 15:25:55,556 - 127.0.0.1 - - [20/Dec/2021 15:25:55] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 15:26:30,626 - Стадия обучения
+2021-12-20 15:26:30,660 - Успешно получили данные для обучения и теста
+2021-12-20 15:26:30,660 - Выбираем тип модели
+2021-12-20 15:26:30,660 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 15:26:30,660 - Имя модели - _rfc_model3
+2021-12-20 15:26:35,304 - Получение данных и препроцессинг
+2021-12-20 15:26:35,311 - Успешно удалили null значения
+2021-12-20 15:26:35,316 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 15:26:35,327 - Done!
+2021-12-20 15:26:41,975 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 15:26:41,975 - Сохраняем модель как model/_rfc_model3.pkl
+2021-12-20 15:26:42,077 - Записываем результаты в БД
+2021-12-20 15:26:42,079 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 15:26:42,118 - Информания о модели {'name': '_rfc_model3.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 15:26:42,118 - Done!
+2021-12-20 15:26:42,120 - 127.0.0.1 - - [20/Dec/2021 15:26:42] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 15:26:42,131 - Получаем информацию о моделе _rfc_model3
+2021-12-20 15:26:42,145 - Done
+2021-12-20 15:26:42,147 - 127.0.0.1 - - [20/Dec/2021 15:26:42] "GET /api/ml_models/model_info/_rfc_model3 HTTP/1.1" 200 -
+2021-12-20 15:26:47,717 - 127.0.0.1 - - [20/Dec/2021 15:26:47] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 15:29:04,310 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "GET / HTTP/1.1" 200 -
+2021-12-20 15:29:04,355 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+2021-12-20 15:29:04,360 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+2021-12-20 15:29:04,366 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2021-12-20 15:29:04,368 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2021-12-20 15:29:04,661 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "GET /swagger.json HTTP/1.1" 200 -
+2021-12-20 15:29:04,754 - 127.0.0.1 - - [20/Dec/2021 15:29:04] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+2021-12-20 15:29:48,075 - 127.0.0.1 - - [20/Dec/2021 15:29:48] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 15:29:50,338 - 127.0.0.1 - - [20/Dec/2021 15:29:50] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 15:29:57,010 - 127.0.0.1 - - [20/Dec/2021 15:29:57] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 15:36:00,943 - Новый запуск приложения
+2021-12-20 15:36:01,016 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 15:36:26,027 - 127.0.0.1 - - [20/Dec/2021 15:36:26] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 15:37:48,345 - Новый запуск приложения
+2021-12-20 15:37:48,397 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 15:38:06,372 - Получаем информацию о доступных классах моделей
+2021-12-20 15:38:06,373 - 127.0.0.1 - - [20/Dec/2021 15:38:06] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 15:38:32,237 - Стадия обучения
+2021-12-20 15:38:32,277 - Успешно получили данные для обучения и теста
+2021-12-20 15:38:32,277 - Выбираем тип модели
+2021-12-20 15:38:32,277 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 15:38:32,278 - Имя модели - 4_rfc_model
+2021-12-20 15:38:36,961 - Получение данных и препроцессинг
+2021-12-20 15:38:36,968 - Успешно удалили null значения
+2021-12-20 15:38:36,972 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 15:38:36,989 - Done!
+2021-12-20 15:38:43,708 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 15:38:43,708 - Сохраняем модель как model/4_rfc_model.pkl
+2021-12-20 15:38:43,793 - Записываем результаты в БД
+2021-12-20 15:38:43,794 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 15:38:43,799 - Информания о модели {'name': '4_rfc_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 15:38:43,799 - Done!
+2021-12-20 15:38:43,801 - 127.0.0.1 - - [20/Dec/2021 15:38:43] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 15:38:43,811 - Получаем информацию о моделе 4_rfc_model
+2021-12-20 15:38:43,831 - Done
+2021-12-20 15:38:43,832 - 127.0.0.1 - - [20/Dec/2021 15:38:43] "GET /api/ml_models/model_info/4_rfc_model HTTP/1.1" 200 -
+2021-12-20 15:55:51,683 - 127.0.0.1 - - [20/Dec/2021 15:55:51] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 16:38:26,598 - Новый запуск приложения
+2021-12-20 16:38:26,650 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 16:38:35,488 - Получаем информацию о доступных классах моделей
+2021-12-20 16:38:35,490 - 127.0.0.1 - - [20/Dec/2021 16:38:35] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 16:39:00,157 - Стадия обучения
+2021-12-20 16:39:00,195 - Успешно получили данные для обучения и теста
+2021-12-20 16:39:00,195 - Выбираем тип модели
+2021-12-20 16:39:00,195 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 16:39:00,195 - Имя модели - 7_rfc_model
+2021-12-20 16:39:04,903 - Получение данных и препроцессинг
+2021-12-20 16:39:04,909 - Успешно удалили null значения
+2021-12-20 16:39:04,912 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 16:39:04,925 - Done!
+2021-12-20 16:39:28,289 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 16:39:28,289 - Сохраняем модель как model/7_rfc_model.pkl
+2021-12-20 16:39:28,385 - Записываем результаты в БД
+2021-12-20 16:39:28,387 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 16:39:28,393 - Информания о модели {'name': '7_rfc_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 16:39:28,393 - Done!
+2021-12-20 16:39:28,396 - 127.0.0.1 - - [20/Dec/2021 16:39:28] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 16:39:28,403 - Получаем информацию о моделе 7_rfc_model
+2021-12-20 16:39:28,416 - Done
+2021-12-20 16:39:28,417 - 127.0.0.1 - - [20/Dec/2021 16:39:28] "GET /api/ml_models/model_info/7_rfc_model HTTP/1.1" 200 -
+2021-12-20 16:59:45,253 - Новый запуск приложения
+2021-12-20 16:59:45,316 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 16:59:53,558 - Получаем информацию о доступных классах моделей
+2021-12-20 16:59:53,559 - 127.0.0.1 - - [20/Dec/2021 16:59:53] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 17:00:09,490 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 17:00:09,490 - Получаем информацию обо всех обученных моделях
+2021-12-20 17:00:09,494 - 127.0.0.1 - - [20/Dec/2021 17:00:09] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 17:00:36,120 - Стадия предсказания
+2021-12-20 17:00:36,120 - Имя модели с помощью которой хотим получить предсказание 7_rfc_model
+2021-12-20 17:00:36,120 - Считываем данные для предсказания
+2021-12-20 17:00:36,149 - Делаем предобработку
+2021-12-20 17:00:36,149 - Получение данных и препроцессинг
+2021-12-20 17:00:36,154 - Успешно удалили null значения
+2021-12-20 17:00:36,157 - категориальные значения ['Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 17:00:36,165 - Done!
+2021-12-20 17:00:36,165 - Импортируем модель model/7_rfc_model.pkl
+2021-12-20 17:00:36,237 - Делаем предобработку
+2021-12-20 17:00:36,260 - Exception on /api/ml_models/predict/7_rfc_model [PUT]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 407, in wrapper
+    return self.make_response(data, code, headers=headers)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\api.py", line 430, in make_response
+    resp = self.representations[mediatype](data, *args, **kwargs)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\flask_restx\representations.py", line 25, in output_json
+    dumped = dumps(data, **settings) + "\n"
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+2021-12-20 17:00:36,305 - 127.0.0.1 - - [20/Dec/2021 17:00:36] "[35m[1mPUT /api/ml_models/predict/7_rfc_model HTTP/1.1[0m" 500 -
+2021-12-20 17:00:36,319 - Получаем предсказания(app.py)
+2021-12-20 17:00:36,321 - 127.0.0.1 - - [20/Dec/2021 17:00:36] "GET /api/ml_models/predict/7_rfc_model HTTP/1.1" 200 -
+2021-12-20 17:08:45,898 - Новый запуск приложения
+2021-12-20 17:08:45,960 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 17:09:34,229 - Получаем информацию о доступных классах моделей
+2021-12-20 17:09:34,231 - 127.0.0.1 - - [20/Dec/2021 17:09:34] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 17:09:45,613 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 17:09:45,613 - Получаем информацию обо всех обученных моделях
+2021-12-20 17:09:45,617 - 127.0.0.1 - - [20/Dec/2021 17:09:45] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 17:11:32,044 - Получаем информацию о доступных классах моделей
+2021-12-20 17:11:32,044 - 127.0.0.1 - - [20/Dec/2021 17:11:32] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 17:11:44,548 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 17:11:44,548 - Получаем информацию обо всех обученных моделях
+2021-12-20 17:11:44,551 - 127.0.0.1 - - [20/Dec/2021 17:11:44] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 17:11:52,917 - Стадия предсказания
+2021-12-20 17:11:52,917 - Имя модели с помощью которой хотим получить предсказание 7_rfc_model
+2021-12-20 17:11:52,918 - Считываем данные для предсказания
+2021-12-20 17:11:52,951 - Делаем предобработку
+2021-12-20 17:11:52,952 - Получение данных и препроцессинг
+2021-12-20 17:11:52,958 - Успешно удалили null значения
+2021-12-20 17:11:52,962 - категориальные значения ['Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 17:11:52,971 - Done!
+2021-12-20 17:11:52,971 - Импортируем модель model/7_rfc_model.pkl
+2021-12-20 17:11:53,062 - this model doesnt exist or invalid input data
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\registry.py", line 76, in get_store_builder
+    store_builder = self._registry[scheme]
+KeyError: 'file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 95, in _get_registry_client
+    registry_client = ModelRegistryClient(self._registry_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 36, in __init__
+    self.store  # pylint: disable=pointless-statement
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 40, in store
+    return utils._get_store(self.registry_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_model_registry\utils.py", line 169, in _get_store
+    return _get_store_registry().get_store(store_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_model_registry\registry.py", line 37, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\_model_registry\registry.py", line 46, in _get_store_with_resolved_uri
+    builder = self.get_store_builder(resolved_store_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\registry.py", line 79, in get_store_builder
+    unsupported_uri=store_uri, supported_uri_schemes=list(self._registry.keys())
+mlflow.tracking.registry.UnsupportedModelRegistryStoreURIException:  Model registry functionality is unavailable; got unsupported URI 'file:///D:/DS/HSE/python_hse/docker_project/mlruns' for model registry data storage. Supported URI schemes are: ['databricks', 'http', 'https', 'postgresql', 'mysql', 'sqlite', 'mssql']. See https://www.mlflow.org/docs/latest/tracking.html#storage for how to run an MLflow server against one of the supported backend storage locations.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 221, in predict_model_mlflow
+    model = mlflow.pyfunc.load_model(model_uri=f'models:/{name}/{version}')
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\pyfunc\__init__.py", line 654, in load_model
+    local_path = _download_artifact_from_uri(artifact_uri=model_uri, output_path=dst_path)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\artifact_utils.py", line 95, in _download_artifact_from_uri
+    return get_artifact_repository(artifact_uri=root_uri).download_artifacts(
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 107, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 73, in get_artifact_repository
+    return repository(artifact_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\artifact\models_artifact_repo.py", line 34, in __init__
+    uri = ModelsArtifactRepository.get_underlying_uri(artifact_uri)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\store\artifact\models_artifact_repo.py", line 54, in get_underlying_uri
+    download_uri = client.get_model_version_download_uri(name, version)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 2589, in get_model_version_download_uri
+    return self._get_registry_client().get_model_version_download_uri(name, version)
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\mlflow\tracking\client.py", line 106, in _get_registry_client
+    FEATURE_DISABLED,
+mlflow.exceptions.MlflowException: Model Registry features are not supported by the store with URI: 'file:///D:/DS/HSE/python_hse/docker_project/mlruns'. Stores with the following URI schemes are supported: ['databricks', 'http', 'https', 'postgresql', 'mysql', 'sqlite', 'mssql'].
+2021-12-20 17:11:53,072 - 127.0.0.1 - - [20/Dec/2021 17:11:53] "PUT /api/ml_models/predict_from_mlflow/7_rfc_model/1 HTTP/1.1" 200 -
+2021-12-20 17:11:53,084 - 127.0.0.1 - - [20/Dec/2021 17:11:53] "[33mGET /api/ml_models/predict/7_rfc_model/1 HTTP/1.1[0m" 404 -
+2021-12-20 18:10:23,601 - Новый запуск приложения
+2021-12-20 18:10:23,716 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 18:10:32,011 - 127.0.0.1 - - [20/Dec/2021 18:10:32] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 18:11:01,271 - 127.0.0.1 - - [20/Dec/2021 18:11:01] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 18:11:24,189 - Получаем информацию о доступных классах моделей
+2021-12-20 18:11:24,191 - 127.0.0.1 - - [20/Dec/2021 18:11:24] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 18:11:43,368 - Стадия обучения
+2021-12-20 18:11:43,403 - Успешно получили данные для обучения и теста
+2021-12-20 18:11:43,403 - Выбираем тип модели
+2021-12-20 18:11:43,403 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 18:11:43,404 - Имя модели - 7_rfc_model
+2021-12-20 18:11:48,148 - Получение данных и препроцессинг
+2021-12-20 18:11:48,153 - Успешно удалили null значения
+2021-12-20 18:11:48,156 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 18:11:48,166 - Done!
+2021-12-20 18:12:12,021 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 18:12:12,021 - Сохраняем модель как model/7_rfc_model.pkl
+2021-12-20 18:12:12,126 - Записываем результаты в БД
+2021-12-20 18:12:12,128 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 18:12:12,129 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 161, in model_train
+    (f'{name}.pkl', str(model_name), _metric, dataset, str(features), str(target)))
+sqlite3.IntegrityError: UNIQUE constraint failed: vvs_models_info.name
+2021-12-20 18:12:12,132 - 127.0.0.1 - - [20/Dec/2021 18:12:12] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 18:12:12,140 - Получаем информацию о моделе 7_rfc_model
+2021-12-20 18:12:12,142 - Done
+2021-12-20 18:12:12,144 - 127.0.0.1 - - [20/Dec/2021 18:12:12] "GET /api/ml_models/model_info/7_rfc_model HTTP/1.1" 200 -
+2021-12-20 18:12:19,761 - 127.0.0.1 - - [20/Dec/2021 18:12:19] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 18:12:46,513 - Получаем информацию о доступных классах моделей
+2021-12-20 18:12:46,514 - 127.0.0.1 - - [20/Dec/2021 18:12:46] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 18:13:05,523 - Стадия обучения
+2021-12-20 18:13:05,552 - Успешно получили данные для обучения и теста
+2021-12-20 18:13:05,552 - Выбираем тип модели
+2021-12-20 18:13:05,552 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 18:13:05,553 - Имя модели - 7_rfc_model
+2021-12-20 18:13:09,901 - Получение данных и препроцессинг
+2021-12-20 18:13:09,905 - Успешно удалили null значения
+2021-12-20 18:13:09,908 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 18:13:09,915 - Done!
+2021-12-20 18:13:32,125 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 18:13:32,125 - Сохраняем модель как model/7_rfc_model.pkl
+2021-12-20 18:13:32,220 - Записываем результаты в БД
+2021-12-20 18:13:32,221 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 18:13:32,222 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 49, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 161, in model_train
+    (f'{name}.pkl', str(model_name), _metric, dataset, str(features), str(target)))
+sqlite3.IntegrityError: UNIQUE constraint failed: vvs_models_info.name
+2021-12-20 18:13:32,224 - 127.0.0.1 - - [20/Dec/2021 18:13:32] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 18:13:32,232 - Получаем информацию о моделе 7_rfc_model
+2021-12-20 18:13:32,233 - Done
+2021-12-20 18:13:32,235 - 127.0.0.1 - - [20/Dec/2021 18:13:32] "GET /api/ml_models/model_info/7_rfc_model HTTP/1.1" 200 -
+2021-12-20 18:13:41,446 - 127.0.0.1 - - [20/Dec/2021 18:13:41] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 20:08:16,234 - Новый запуск приложения
+2021-12-20 20:08:16,327 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 20:08:22,678 - Получаем информацию о доступных классах моделей
+2021-12-20 20:08:22,680 - 127.0.0.1 - - [20/Dec/2021 20:08:22] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 20:08:49,706 - Стадия обучения
+2021-12-20 20:08:49,743 - Успешно получили данные для обучения и теста
+2021-12-20 20:08:49,743 - Выбираем тип модели
+2021-12-20 20:08:49,743 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 20:08:49,744 - Имя модели - 8_rfc_model
+2021-12-20 20:08:55,436 - Получение данных и препроцессинг
+2021-12-20 20:08:55,442 - Успешно удалили null значения
+2021-12-20 20:08:55,445 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 20:08:55,456 - Done!
+2021-12-20 20:09:18,019 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 20:09:18,019 - Сохраняем модель как model/8_rfc_model.pkl
+2021-12-20 20:09:18,115 - Записываем результаты в БД
+2021-12-20 20:09:18,116 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 20:09:18,120 - Информания о модели {'name': '8_rfc_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 20:09:18,120 - Done!
+2021-12-20 20:09:18,121 - 127.0.0.1 - - [20/Dec/2021 20:09:18] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 20:09:18,132 - Получаем информацию о моделе 8_rfc_model
+2021-12-20 20:09:18,146 - Done
+2021-12-20 20:09:18,148 - 127.0.0.1 - - [20/Dec/2021 20:09:18] "GET /api/ml_models/model_info/8_rfc_model HTTP/1.1" 200 -
+2021-12-20 20:26:18,024 - Новый запуск приложения
+2021-12-20 20:26:18,098 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 20:26:22,350 - 127.0.0.1 - - [20/Dec/2021 20:26:22] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 20:27:15,540 - Получаем информацию о доступных классах моделей
+2021-12-20 20:27:15,541 - 127.0.0.1 - - [20/Dec/2021 20:27:15] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 20:27:52,126 - Стадия обучения
+2021-12-20 20:27:52,162 - Успешно получили данные для обучения и теста
+2021-12-20 20:27:52,162 - Выбираем тип модели
+2021-12-20 20:27:52,162 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 20:27:52,162 - Имя модели - 8_rfc_model
+2021-12-20 20:27:56,784 - Получение данных и препроцессинг
+2021-12-20 20:27:56,790 - Успешно удалили null значения
+2021-12-20 20:27:56,794 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 20:27:56,806 - Done!
+2021-12-20 20:28:20,083 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 20:28:20,084 - Сохраняем модель как model/8_rfc_model.pkl
+2021-12-20 20:28:20,142 - Записываем результаты в БД
+2021-12-20 20:28:20,143 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 20:28:20,144 - Exception on /api/ml_models/train [POST]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 50, in post
+    return model.model_train(api.payload)
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 161, in model_train
+    (f'{name}.pkl', str(model_name), _metric, dataset, str(features), str(target)))
+sqlite3.IntegrityError: UNIQUE constraint failed: vvs_models_info.name
+2021-12-20 20:28:20,147 - 127.0.0.1 - - [20/Dec/2021 20:28:20] "[35m[1mPOST /api/ml_models/train HTTP/1.1[0m" 500 -
+2021-12-20 20:28:20,155 - Получаем информацию о моделе 8_rfc_model
+2021-12-20 20:28:20,156 - Done
+2021-12-20 20:28:20,157 - 127.0.0.1 - - [20/Dec/2021 20:28:20] "GET /api/ml_models/model_info/8_rfc_model HTTP/1.1" 200 -
+2021-12-20 20:28:23,955 - 127.0.0.1 - - [20/Dec/2021 20:28:23] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 20:29:47,420 - Получаем информацию о доступных классах моделей
+2021-12-20 20:29:47,422 - 127.0.0.1 - - [20/Dec/2021 20:29:47] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 20:30:16,314 - Стадия обучения
+2021-12-20 20:30:16,342 - Успешно получили данные для обучения и теста
+2021-12-20 20:30:16,342 - Выбираем тип модели
+2021-12-20 20:30:16,342 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 20:30:16,343 - Имя модели - 9_rfc_model
+2021-12-20 20:30:20,540 - Получение данных и препроцессинг
+2021-12-20 20:30:20,545 - Успешно удалили null значения
+2021-12-20 20:30:20,547 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 20:30:20,554 - Done!
+2021-12-20 20:30:42,187 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 20:30:42,187 - Сохраняем модель как model/9_rfc_model.pkl
+2021-12-20 20:30:42,282 - Записываем результаты в БД
+2021-12-20 20:30:42,282 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 20:30:42,286 - Информания о модели {'name': '9_rfc_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 20:30:42,286 - Done!
+2021-12-20 20:30:42,287 - 127.0.0.1 - - [20/Dec/2021 20:30:42] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 20:30:42,300 - Получаем информацию о моделе 9_rfc_model
+2021-12-20 20:30:42,319 - Done
+2021-12-20 20:30:42,320 - 127.0.0.1 - - [20/Dec/2021 20:30:42] "GET /api/ml_models/model_info/9_rfc_model HTTP/1.1" 200 -
+2021-12-20 20:31:29,127 - 127.0.0.1 - - [20/Dec/2021 20:31:29] "GET /metrics HTTP/1.1" 200 -
+2021-12-20 21:36:20,647 - Новый запуск приложения
+2021-12-20 21:36:20,737 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 21:36:55,947 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:36:55,949 - Done
+2021-12-20 21:36:55,951 - 127.0.0.1 - - [20/Dec/2021 21:36:55] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:36:55,990 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:36:55,992 - Done
+2021-12-20 21:36:55,993 - 127.0.0.1 - - [20/Dec/2021 21:36:55] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:39:07,156 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:39:07,157 - Done
+2021-12-20 21:39:07,159 - 127.0.0.1 - - [20/Dec/2021 21:39:07] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:39:07,168 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:39:07,169 - Done
+2021-12-20 21:39:07,170 - 127.0.0.1 - - [20/Dec/2021 21:39:07] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:39:07,182 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 21:39:07,182 - Получаем информацию обо всех обученных моделях
+2021-12-20 21:39:07,185 - 127.0.0.1 - - [20/Dec/2021 21:39:07] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 21:39:30,775 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:39:30,776 - Done
+2021-12-20 21:39:30,778 - 127.0.0.1 - - [20/Dec/2021 21:39:30] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:39:30,799 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 21:39:30,800 - Получаем информацию обо всех обученных моделях
+2021-12-20 21:39:30,803 - 127.0.0.1 - - [20/Dec/2021 21:39:30] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 21:40:07,065 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:40:07,066 - Done
+2021-12-20 21:40:07,068 - 127.0.0.1 - - [20/Dec/2021 21:40:07] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:40:07,082 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:40:07,083 - Done
+2021-12-20 21:40:07,084 - 127.0.0.1 - - [20/Dec/2021 21:40:07] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:40:33,750 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:40:33,752 - Done
+2021-12-20 21:40:33,753 - 127.0.0.1 - - [20/Dec/2021 21:40:33] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:40:33,764 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:40:33,765 - Done
+2021-12-20 21:40:33,767 - 127.0.0.1 - - [20/Dec/2021 21:40:33] "GET /api/ml_models/model_info/1_model_dtr HTTP/1.1" 200 -
+2021-12-20 21:40:33,775 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 21:40:33,775 - Получаем информацию обо всех обученных моделях
+2021-12-20 21:40:33,778 - 127.0.0.1 - - [20/Dec/2021 21:40:33] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 21:52:47,358 - Получаем информацию о моделе 1_rfc_model
+2021-12-20 21:52:47,359 - Done
+2021-12-20 21:52:47,361 - 127.0.0.1 - - [20/Dec/2021 21:52:47] "GET /api/ml_models/model_info/1_rfc_model HTTP/1.1" 200 -
+2021-12-20 21:52:47,370 - Удаляем модель(app.py)
+2021-12-20 21:52:47,370 - Пытаемся удалить модель 1_rfc_model
+2021-12-20 21:52:47,375 - Done
+2021-12-20 21:52:47,376 - 127.0.0.1 - - [20/Dec/2021 21:52:47] "DELETE /api/ml_models/predict/1_rfc_model HTTP/1.1" 200 -
+2021-12-20 21:52:47,384 - Получаем информацию о моделе 1_rfc_model
+2021-12-20 21:52:47,398 - Exception on /api/ml_models/model_info/1_rfc_model [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 21:52:47,403 - 127.0.0.1 - - [20/Dec/2021 21:52:47] "[35m[1mGET /api/ml_models/model_info/1_rfc_model HTTP/1.1[0m" 500 -
+2021-12-20 21:53:36,329 - Получаем информацию о моделе 7_rfc_model
+2021-12-20 21:53:36,330 - Exception on /api/ml_models/model_info/7_rfc_model [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 21:53:36,333 - 127.0.0.1 - - [20/Dec/2021 21:53:36] "[35m[1mGET /api/ml_models/model_info/7_rfc_model HTTP/1.1[0m" 500 -
+2021-12-20 21:53:36,346 - Получаем информацию о моделе 1_model_dtr
+2021-12-20 21:53:36,347 - Exception on /api/ml_models/model_info/1_model_dtr [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 21:53:36,350 - 127.0.0.1 - - [20/Dec/2021 21:53:36] "[35m[1mGET /api/ml_models/model_info/1_model_dtr HTTP/1.1[0m" 500 -
+2021-12-20 21:53:36,358 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 21:53:36,359 - Получаем информацию обо всех обученных моделях
+2021-12-20 21:53:36,361 - 127.0.0.1 - - [20/Dec/2021 21:53:36] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 21:55:03,224 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 21:55:03,224 - Получаем информацию обо всех обученных моделях
+2021-12-20 21:55:03,226 - 127.0.0.1 - - [20/Dec/2021 21:55:03] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 21:56:38,615 - Получаем информацию о моделе 7_rfc_model
+2021-12-20 21:56:38,617 - Exception on /api/ml_models/model_info/7_rfc_model [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 21:56:38,620 - 127.0.0.1 - - [20/Dec/2021 21:56:38] "[35m[1mGET /api/ml_models/model_info/7_rfc_model HTTP/1.1[0m" 500 -
+2021-12-20 21:56:52,119 - Получаем информацию о моделе 7_rfc_model
+2021-12-20 21:56:52,120 - Exception on /api/ml_models/model_info/7_rfc_model [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 21:56:52,121 - 127.0.0.1 - - [20/Dec/2021 21:56:52] "[35m[1mGET /api/ml_models/model_info/7_rfc_model HTTP/1.1[0m" 500 -
+2021-12-20 22:01:07,402 - Получаем информацию о моделе 3_model_rfc
+2021-12-20 22:01:07,404 - Exception on /api/ml_models/model_info/3_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:01:07,406 - 127.0.0.1 - - [20/Dec/2021 22:01:07] "[35m[1mGET /api/ml_models/model_info/3_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:01:07,416 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 22:01:07,416 - Получаем информацию обо всех обученных моделях
+2021-12-20 22:01:07,418 - 127.0.0.1 - - [20/Dec/2021 22:01:07] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 22:01:43,643 - Получаем информацию о моделе 3_model_rfc
+2021-12-20 22:01:43,644 - Exception on /api/ml_models/model_info/3_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:01:43,648 - 127.0.0.1 - - [20/Dec/2021 22:01:43] "[35m[1mGET /api/ml_models/model_info/3_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:01:43,663 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 22:01:43,663 - Получаем информацию обо всех обученных моделях
+2021-12-20 22:01:43,666 - 127.0.0.1 - - [20/Dec/2021 22:01:43] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 22:02:05,799 - Новый запуск приложения
+2021-12-20 22:02:05,867 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 22:02:11,096 - Получаем информацию о моделе 3_model_rfc
+2021-12-20 22:02:11,098 - Exception on /api/ml_models/model_info/3_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:02:11,103 - 127.0.0.1 - - [20/Dec/2021 22:02:11] "[35m[1mGET /api/ml_models/model_info/3_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:02:48,692 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 22:02:48,692 - Получаем информацию обо всех обученных моделях
+2021-12-20 22:02:48,695 - 127.0.0.1 - - [20/Dec/2021 22:02:48] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 22:07:03,071 - Получаем информацию о моделе 5_model_rfc
+2021-12-20 22:07:03,073 - Exception on /api/ml_models/model_info/5_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:07:03,075 - 127.0.0.1 - - [20/Dec/2021 22:07:03] "[35m[1mGET /api/ml_models/model_info/5_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:07:03,089 - Получаем информациб обо все обученных моделях(app.py)
+2021-12-20 22:07:03,089 - Получаем информацию обо всех обученных моделях
+2021-12-20 22:07:03,092 - 127.0.0.1 - - [20/Dec/2021 22:07:03] "GET /api/ml_models/models_info HTTP/1.1" 200 -
+2021-12-20 22:08:35,624 - Получаем информацию о моделе 5_model_rfc
+2021-12-20 22:08:35,625 - Exception on /api/ml_models/model_info/5_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:08:35,626 - 127.0.0.1 - - [20/Dec/2021 22:08:35] "[35m[1mGET /api/ml_models/model_info/5_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:08:58,336 - Получаем информацию о моделе 1_model_rfc
+2021-12-20 22:08:58,338 - Exception on /api/ml_models/model_info/1_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:08:58,342 - 127.0.0.1 - - [20/Dec/2021 22:08:58] "[35m[1mGET /api/ml_models/model_info/1_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:09:37,065 - Новый запуск приложения
+2021-12-20 22:09:37,150 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 22:09:50,041 - Получаем информацию о моделе 1_model_rfc
+2021-12-20 22:09:50,044 - Exception on /api/ml_models/model_info/1_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:09:50,049 - 127.0.0.1 - - [20/Dec/2021 22:09:50] "[35m[1mGET /api/ml_models/model_info/1_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:21:25,089 - Новый запуск приложения
+2021-12-20 22:21:25,178 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 22:21:33,720 - Получаем информацию о моделе 2_model_rfc
+2021-12-20 22:21:33,723 - Exception on /api/ml_models/model_info/2_model_rfc [GET]
+Traceback (most recent call last):
+  File "C:\Users\vvsevernov\anaconda3\envs\flask\lib\site-packages\prometheus_flask_exporter\__init__.py", line 656, in func
+    response = f(*args, **kwargs)
+  File "D:\DS\HSE\python_hse\docker_project\app.py", line 72, in get
+    return jsonify({"info": model.pretrained_model_info(name)})
+  File "D:\DS\HSE\python_hse\docker_project\ml_model.py", line 182, in pretrained_model_info
+    model_info = dict(zip(keys, values[0]))
+IndexError: list index out of range
+2021-12-20 22:21:33,728 - 127.0.0.1 - - [20/Dec/2021 22:21:33] "[35m[1mGET /api/ml_models/model_info/2_model_rfc HTTP/1.1[0m" 500 -
+2021-12-20 22:22:18,724 - Новый запуск приложения
+2021-12-20 22:22:18,809 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-20 22:22:34,274 - Получаем информацию о доступных классах моделей
+2021-12-20 22:22:34,276 - 127.0.0.1 - - [20/Dec/2021 22:22:34] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 22:22:47,059 - Стадия обучения
+2021-12-20 22:22:47,094 - Успешно получили данные для обучения и теста
+2021-12-20 22:22:47,095 - Выбираем тип модели
+2021-12-20 22:22:47,095 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 22:22:47,095 - Имя модели - dmkmdk
+2021-12-20 22:22:51,694 - Получение данных и препроцессинг
+2021-12-20 22:22:51,699 - Успешно удалили null значения
+2021-12-20 22:22:51,702 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 22:22:51,712 - Done!
+2021-12-20 22:23:14,906 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 22:23:14,906 - Сохраняем модель как model/dmkmdk.pkl
+2021-12-20 22:23:15,029 - Записываем результаты в БД
+2021-12-20 22:23:15,031 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 22:23:15,036 - Информания о модели {'name': 'dmkmdk.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 22:23:15,036 - Done!
+2021-12-20 22:23:15,038 - 127.0.0.1 - - [20/Dec/2021 22:23:15] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 22:23:15,048 - Получаем информацию о моделе dmkmdk
+2021-12-20 22:23:15,060 - Done
+2021-12-20 22:23:15,062 - 127.0.0.1 - - [20/Dec/2021 22:23:15] "GET /api/ml_models/model_info/dmkmdk HTTP/1.1" 200 -
+2021-12-20 22:23:48,136 - Получаем информацию о моделе dmkmdk
+2021-12-20 22:23:48,137 - Done
+2021-12-20 22:23:48,138 - 127.0.0.1 - - [20/Dec/2021 22:23:48] "GET /api/ml_models/model_info/dmkmdk HTTP/1.1" 200 -
+2021-12-20 22:23:56,240 - Получаем информацию о моделе dmkmdk
+2021-12-20 22:23:56,241 - Done
+2021-12-20 22:23:56,243 - 127.0.0.1 - - [20/Dec/2021 22:23:56] "GET /api/ml_models/model_info/dmkmdk HTTP/1.1" 200 -
+2021-12-20 22:24:52,940 - Получаем информацию о доступных классах моделей
+2021-12-20 22:24:52,941 - 127.0.0.1 - - [20/Dec/2021 22:24:52] "GET /api/ml_models/model_class HTTP/1.1" 200 -
+2021-12-20 22:25:24,149 - Стадия обучения
+2021-12-20 22:25:24,175 - Успешно получили данные для обучения и теста
+2021-12-20 22:25:24,176 - Выбираем тип модели
+2021-12-20 22:25:24,176 - Выбиранный тип модели - RandomForestClassifier
+2021-12-20 22:25:24,176 - Имя модели - test_model
+2021-12-20 22:25:28,349 - Получение данных и препроцессинг
+2021-12-20 22:25:28,354 - Успешно удалили null значения
+2021-12-20 22:25:28,356 - категориальные значения ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+2021-12-20 22:25:28,364 - Done!
+2021-12-20 22:25:50,012 - Качество модели на отложенной выборки - Accuracy = 0.6486486486486487
+2021-12-20 22:25:50,012 - Сохраняем модель как model/test_model.pkl
+2021-12-20 22:25:50,121 - Записываем результаты в БД
+2021-12-20 22:25:50,123 - Извлекаем информацию об обученной модели из БД flask_app.db
+2021-12-20 22:25:50,128 - Информания о модели {'name': 'test_model.pkl', 'model_name': 'RandomForestClassifier', 'metric': 0.6486486486486487, 'dataset': 'titanic_train.csv', 'features': ['PassengerId', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], 'target': ['Survived']}!
+2021-12-20 22:25:50,128 - Done!
+2021-12-20 22:25:50,130 - 127.0.0.1 - - [20/Dec/2021 22:25:50] "POST /api/ml_models/train HTTP/1.1" 200 -
+2021-12-20 22:25:50,140 - Получаем информацию о моделе test_model
+2021-12-20 22:25:50,151 - Done
+2021-12-20 22:25:50,153 - 127.0.0.1 - - [20/Dec/2021 22:25:50] "GET /api/ml_models/model_info/test_model HTTP/1.1" 200 -
+2021-12-20 22:26:19,977 - Получаем информацию о моделе test_model
+2021-12-20 22:26:19,979 - Done
+2021-12-20 22:26:19,980 - 127.0.0.1 - - [20/Dec/2021 22:26:19] "GET /api/ml_models/model_info/test_model HTTP/1.1" 200 -
+2021-12-20 22:31:23,091 - Новый запуск приложения
+2021-12-20 22:34:21,032 - Меняем имя модели
+2021-12-20 22:34:21,034 - 127.0.0.1 - - [20/Dec/2021 22:34:21] "POST /api/ml_models/update HTTP/1.1" 200 -
+2021-12-20 22:35:07,392 - Меняем имя модели
+2021-12-20 22:35:07,409 - 127.0.0.1 - - [20/Dec/2021 22:35:07] "POST /api/ml_models/update HTTP/1.1" 200 -
+2021-12-20 22:35:49,404 - Меняем имя модели
+2021-12-20 22:35:49,418 - 127.0.0.1 - - [20/Dec/2021 22:35:49] "POST /api/ml_models/update HTTP/1.1" 200 -
+2021-12-20 22:36:34,258 - Меняем имя модели
+2021-12-20 22:36:34,261 - 127.0.0.1 - - [20/Dec/2021 22:36:34] "POST /api/ml_models/update HTTP/1.1" 200 -
+2021-12-20 22:37:46,676 - Меняем имя модели
+2021-12-20 22:37:46,693 - 127.0.0.1 - - [20/Dec/2021 22:37:46] "POST /api/ml_models/update HTTP/1.1" 200 -

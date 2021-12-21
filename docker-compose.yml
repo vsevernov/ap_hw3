@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+        prometheus:
+                image: prom/prometheus:latest
+                ports:
+                         - 9090:9090
+                volumes:
+                        - ./prometheus.yml:/etc/prometheus/prometheus.yml
+        app:
+                container_name: flask_api
+                build: ./docker_project/.  
+       
+                ports:
+                        - 5000:5000
+                volumes:
+                        - ./docker_project/app.py:/app.py
